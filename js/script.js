@@ -114,6 +114,8 @@ $(document).ready(function() {
 
   var startGame = function() {
     $('.start-game').hide();
+    $('.head').toggleClass('head-start');
+    $('#title').toggleClass('title-start');
     showDeck();
   };
 

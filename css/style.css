@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 html, body {
@@ -11,6 +11,7 @@ html, body {
   text-decoration: none;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -22,9 +23,12 @@ h1 {
   font-size: 3em;
 }
 
+h3 {
+  font-size: 1em;
+}
+
 span {
   font-size: 1.5em;
-  line-height: 2em;
 }
 
 .text-center {
@@ -38,6 +42,7 @@ span {
 .container {
   width: 100%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .head {
@@ -48,13 +53,22 @@ span {
   margin-bottom: 20px;
 }
 
+.head-start {
+  padding-top: 1px;
+  padding-bottom: 3px;
+}
+
+.title-start {
+  font-size: 1.5em;
+}
+
 .status-bar {
   display: inline-block;
   margin: 0 20px;
 }
 
 .start-game {
-  min-height: 297px;
+  min-height: 15.92em;
 }
 
 .game-bar {
@@ -89,14 +103,14 @@ span {
 }
 
 #start-btn {
-  margin-top: 6.2em;
+  margin-top: 3em;
 }
 
 #start-btn, #restart-btn {
   font-family: 'Spinnaker', sans-serif;
   color: #fbaf5d;
   background: transparent;
-  font-size: 20px;
+  font-size: 2em;
   padding: 10px 20px 10px 20px;
   border: solid #fbaf5d 2px;
   text-decoration: none;
