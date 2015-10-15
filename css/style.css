@@ -19,9 +19,6 @@ ul {
 
 h1 {
   font-family: 'Pacifico', cursive;
-}
-
-h1 {
   font-size: 3em;
 }
 
@@ -51,19 +48,13 @@ span {
   margin-bottom: 20px;
 }
 
-#count-down {
-  /*float: left;*/
-  margin-right: 20px;
+.status-bar {
   display: inline-block;
-}
-
-#chances-left {
-  /*float: right;*/
-  display: inline-block;
+  margin: 0 20px;
 }
 
 .start-game {
-  /*min-height: 400px;*/
+  min-height: 297px;
 }
 
 .game-bar {
@@ -97,6 +88,10 @@ span {
   background-size: cover;
 }
 
+#start-btn {
+  margin-top: 6.2em;
+}
+
 #start-btn, #restart-btn {
   font-family: 'Spinnaker', sans-serif;
   color: #fbaf5d;
@@ -114,7 +109,7 @@ span {
 }
 
 .disableKey {
-  pointer-events: 'none';
+  pointer-events: none;
 }
 
 footer {
