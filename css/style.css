@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+html, body {
+  font-family: 'Spinnaker', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fbaf5d;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+span {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix {
+  float: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.head {
+  background-color: #fbaf5d;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+#count-down {
+  /*float: left;*/
+  margin-right: 20px;
+  display: inline-block;
+}
+
+#chances-left {
+  /*float: right;*/
+  display: inline-block;
+}
+
+.start-game {
+  /*min-height: 400px;*/
+}
+
+.game-bar {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: inline-block;
+  transition: 0.8s;
+  margin: 10px;
+}
+
+/*.card .flipped {
+  transform: rotateY(-180deg);
+}*/
+
+.up, .down {
+  background-size: cover;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+.up {
+  transform: rotateY(-180deg);
+}
+
+.down {
+  background: url(../img/card-back.png) no-repeat;
+  background-size: cover;
+}
+
+#start-btn, #restart-btn {
+  font-family: 'Spinnaker', sans-serif;
+  color: #fbaf5d;
+  background: transparent;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #fbaf5d 2px;
+  text-decoration: none;
+}
+
+#start-btn:hover, #restart-btn:hover {
+  background: #fbaf5d;
+  color: #fff;
+  text-decoration: none;
+}
+
+.disableKey {
+  pointer-events: 'none';
+}
+
+footer {
+  background-color: #fbaf5d;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+@media all and (min-width: 500px) {
+  .container {
+    width: 80%;
+  }
+}
