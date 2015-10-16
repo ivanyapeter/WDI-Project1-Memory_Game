@@ -1,26 +1,29 @@
 $(document).ready(function() {
   var arrCards = [ 'akita', 'corgi', 'dalmation', 'golden', 'husky', 'kingcharles', 'labrador'
                     , 'papillon' , 'pug', 'rottweiler', 'shibainu', 'westie' ];
-  var numOfCards = 12;
-  var selectedCards = arrCards.slice(0, numOfCards);
+  var numOfDog = 12;
+  var selectedCards = arrCards.slice(0, numOfDog);
   var cardDeck = selectedCards.slice(0);
   cardDeck = $.merge(cardDeck, selectedCards);
   cardDeck = _.shuffle(cardDeck);
   var firstCard = '';
   var secondCard = '';
-  var numOfGuess = 30; // more to change this somewhere else!
+  var numOfGuess = 100;
+  var guessLeft = numOfGuess;
   var numOfCorrect = 0;
-  var timelimit = 90; // in second
+  var timelimit = 180; // in second
   var timerInterval = ''
   var display = $('#count-down');
 
   console.log( cardDeck );
-  $('#restart-btn').hide();
+  $('#game-restart').hide();
   $('.status-bar').hide()
+  $('.game-bar').hide();
+
   // showDeck function
   var showDeck = function() {
     startTimer(timelimit, display);
-    $('#chances-left').html(numOfGuess);
+    $('#chances-left').html(guessLeft);
     // in window show 8 card images
     // assign each card with value from array
     $cardList = $('<div>').attr('class', 'list-of-card');
@@ -34,11 +37,18 @@ $(document).ready(function() {
     console.log('all card in the deck')
     $('.card').removeClass('disableKey');
     $('.status-bar').show();
-    $('#restart-btn').show();
+    $('#game-restart').show();
+
   }
 
   // Click a card event
   $('.deck-of-card').on('click', '.card', function() {
+
+    if ( $('.up.ready').length >= 2 ) {
+      return;
+    }
+
+
     checkValidity();
 
     if (firstCard === '') {
@@ -51,19 +61,21 @@ $(document).ready(function() {
 
     // if 2 value saved, run compareCard
     if ( $('.ready').length == 2 ) {
+      $('.card').addClass('disableKey');
       compareCard(firstCard, secondCard);
     }
-    numOfGuess--;
-    $('#chances-left').html(numOfGuess);
+    guessLeft--;
+    $('#chances-left').html(guessLeft);
 
     if ( numOfCorrect === ( cardDeck.length / 2 ) ) {
+      
       celebrate();
       return
-    } else if ( numOfGuess === 0 ) {
+    } else if ( guessLeft === 0 ) {
       gameOver();
       return
     }
-
+    $('.card').removeClass('disableKey');
   });
 
   var checkValidity = function() {
@@ -87,14 +99,18 @@ $(document).ready(function() {
   }; 
 
   var celebrate = function() {
-    $('#win-lose').html('YEY!');
-    $('#comment').html('You found them all in ' + (cardDeck.length - numOfGuess) + ' guesses!');
+    $('.game-bar').show();
+    $('#win-lose').html('YOU WIN!!');
+    $('#win-lose-img').append('<img src="img/win-1.jpg" />').addClass('test');
+    $('#comment').html('You found them all in ' + (numOfGuess - guessLeft) + ' guesses!');
     clearInterval(timerInterval);
     $('.card').addClass('disableKey');
   };
 
   var gameOver = function() {
-    $('#win-lose').html('YEY!');
+    $('.game-bar').show();
+    $('#win-lose').html('BOOOOO!');
+    $('#win-lose-img').append('<img src="img/lose.jpg" />');
     $('#comment').html('You ... nevermind, who\'s next?');
     clearInterval(timerInterval);
     $('.card').addClass('disableKey');
@@ -120,15 +136,19 @@ $(document).ready(function() {
   };
 
   var restartGame = function() {
+    
     cardDeck = _.shuffle(cardDeck);
     firstCard = '';
     secondCard = '';
-    numOfGuess = 30;
+    guessLeft = numOfGuess;
     numOfCorrect = 0;
+    $('.game-bar').hide();
+    $('#win-lose-img img').remove()
+    $('#the-img').attr('class', '');
+    $('#comment').html('count-down');
     clearInterval(timerInterval);
     $('.list-of-card').remove();
     showDeck();
-    // to welcome section
   };
 
   startTimer = function(duration, display) {
@@ -151,7 +171,7 @@ $(document).ready(function() {
       }, 1000);
   }
 
-  $('#restart-btn').on('click', restartGame);
+  $('.restart-btn').on('click', restartGame);
   $('#start-btn').on('click', startGame);
 
 });

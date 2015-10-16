@@ -13,7 +13,7 @@
       <h1 id="title">Woof <span>!</span></h1>
       <div class="status-bar">
         <h3>Time Left</h3>
-        <h3 id="count-down">01:00</h3>
+        <h3 id="count-down">ready?</h3>
       </div>
       <div class="status-bar">
         <h3>Try Left</h3>
@@ -24,25 +24,31 @@
 
   <span class="chances-left"></span>
 
-  <div class="container text-center">
+  <div id="game-area" class="container text-center">
     <section class="start-game">
       <button id="start-btn">START GAME</button>
     </section>
     <section class="deck-of-card">
     </section>
-
     <section class="game-bar">
       <h3 id="win-lose"></h3>
+      <div id="win-lose-img">
+        <div id="the-img"></div>
+      </div>
       <p id="comment"></p>
-      <button id="restart-btn">PLAY AGAIN</button>
+      <button class="restart-btn">PLAY AGAIN</button>
     </section>
   </div>
 
-  <footer>
+  <div id="game-restart" class="container text-center">
+    <button class="restart-btn">PLAY AGAIN</button>
+  </div>
+
+  <!-- <footer>
     <div class="container">
       <p>Copyright</p>
     </div>    
-  </footer>
+  </footer> -->
 
 <script type="text/javascript" src="js/lib/underscore-min.js"></script>  
 <script type="text/javascript" src="js/lib/jquery-min.js"></script>  
