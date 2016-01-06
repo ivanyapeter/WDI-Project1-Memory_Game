@@ -1,22 +1,20 @@
-# Memory Game
-=======
+# Project 1: [Memory Game](http://ivanyapeter.github.io/WDI-Project1-Memory_Game/)
 Created as an educational project for General Assembly Melbourne
-https://gist.github.com/epoch/fa926c32b366044093f8
 
-# Table of Contents
+## Table of Contents
   1. [Overview](#overview)
     + [Goals](#goals)
     + [Technical Requirements](#technical-requirements)
-    + [Timeline](#timeline)
+    + [Constraint](#constraint)
   2. [Deliverables](#deliverables)
     + [Technology Used](#technology-used)
     + [Approach](#approach)
-    + [Unsolved Problem](#unsolved-problem)
   3. [Resources](#resources)
 
   
 # <a id="overview"></a>
-## Overview
+#### Overview
+This is a classic memory game with time constrain and number of tries per game. I created this memory game to be played in all size of browser.
 
 # <a id="goals"></a>
 #### Goals
@@ -29,7 +27,7 @@ https://gist.github.com/epoch/fa926c32b366044093f8
 
 # <a id="technical-requirements"></a>
 #### Technical Requirements
-Your app must:
+The app must:
 * Render a game board in the browser
 * Switch turns between X and O (or whichever markers you select) 
 * Visually display which side won if a player gets three in a row or show a draw/cat’s game if neither does
@@ -39,21 +37,32 @@ Your app must:
 * Be deployed on a host somewhere where the rest of the world can see it
 * Use semantic markup for HTML and CSS (adhere to best practices)
 
-# <a id="timeline"></a>
-#### Timeline
+# <a id="constraint"></a>
+#### Constraint
+Time: require to deliver a working and tested product within 4 days
 
 # <a id="deliverables"></a>
-## Deliverables
+#### Deliverables
+* A working memory game
+* Responsive design without css library
 
 # <a id="technology-used"></a>
-#### Technology Used
+#### Technology
+1. HTML
+2. CSS
+3. JavaScript
+4. jQuery
+5. Underscore.js
 
 # <a id="approach"></a>
 #### Approach
-
-# <a id="unsolved-problem"></a>
-#### Unsolved Problem
-
+1. Create the theme for the game
+2. Work on the the game logic with JavaScript, jQuery and Underscore.js
+3. Structure the HTML
+4. Initial styling with CSS
+5. Add animation with JavaScript and jQuery
 
 # <a id="resource"></a>
-## Resources
+#### Resources
+1. [Project Description](https://gist.github.com/epoch/fa926c32b366044093f8)
+2. Most dog images are from [Artlist collection of The Dog](http://www.thedogandfriends.com/)
