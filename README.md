@@ -11,8 +11,6 @@ Created as an educational project for General Assembly Melbourne
     + [Approach](#approach)
   3. [Resources](#resources)
 
-  
-# <a id="overview"></a>
 #### Overview
 This is a classic memory game with time constrain and number of tries per game. I created this memory game to be played in all size of browser.
 
