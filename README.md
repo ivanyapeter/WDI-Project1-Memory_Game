@@ -7,7 +7,7 @@ Created as an educational project for General Assembly Melbourne
     + [Technical Requirements](#technical-requirements)
     + [Constraint](#constraint)
   2. [Deliverables](#deliverables)
-    + [Technology Used](#technology-used)
+    + [Technology](#technology)
     + [Approach](#approach)
   3. [Resources](#resources)
 
