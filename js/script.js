@@ -1,17 +1,17 @@
 $(document).ready(function() {
   var arrCards = [ 'akita', 'corgi', 'dalmation', 'golden', 'husky', 'kingcharles', 'labrador'
                     , 'papillon' , 'pug', 'rottweiler', 'shibainu', 'westie' ];
-  var numOfDog = 12;
+  var numOfDog = 6; // 12
   var selectedCards = arrCards.slice(0, numOfDog);
   var cardDeck = selectedCards.slice(0);
   cardDeck = $.merge(cardDeck, selectedCards);
   cardDeck = _.shuffle(cardDeck);
   var firstCard = '';
   var secondCard = '';
-  var numOfGuess = 100;
+  var numOfGuess = 24; // 100
   var guessLeft = numOfGuess;
   var numOfCorrect = 0;
-  var timelimit = 180; // in second
+  var timelimit = 90; // 180 // in second
   var timerInterval = ''
   var display = $('#count-down');
 
