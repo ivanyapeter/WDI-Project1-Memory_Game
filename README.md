@@ -1,6 +1,8 @@
 # Project 1: [Memory Game](http://ivanyapeter.github.io/WDI-Project1-Memory_Game/)
-Created as an educational project for General Assembly Melbourne
-Project link: http://ivanyapeter.github.io/WDI-Project1-Memory_Game/
+Created as an educational project for General Assembly Melbourne.
+
+#####Project link:
+http://ivanyapeter.github.io/WDI-Project1-Memory_Game/
 
 ## Table of Contents
   1. [Overview](#overview)
